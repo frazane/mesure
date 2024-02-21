@@ -1,0 +1,43 @@
+[project]
+name = "mesure"
+version = "0.0.1"
+description = "A python library for micro benchmarks and profiling."
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE.txt"}
+keywords = ["benchmark", "microbenchmark", "performance", "profiling"]
+authors = [
+    {name = "Francesco Zanetta", email = "zanetta.francesco@gmail.com" }
+]
+maintainers = [
+    {name = "Francesco Zanetta", email = "zanetta.francesco@gmail.com" }
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+# https://peps.python.org/pep-0508/
+# https://peps.python.org/pep-0440/#version-specifiers
+dependencies = [
+  "psutil ~= 5.9",
+  "plotext ~= 5.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff ~= 0.2",
+    "pytest ~= 8.0",
+    "coverage ~= 7.4",
+    "pytest-cov ~= 4.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/frazane/mesure"
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
